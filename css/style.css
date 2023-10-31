@@ -1,0 +1,258 @@
+/* Définition de la disposition de l'élément html */
+html{
+    box-sizing: border-box;
+}
+/* Définition de la taille et placement de l'élément body */
+body{
+    max-width: 98%;
+    margin: auto;
+    background-color: #bfbfbf;
+}
+a:hover{
+    transition:ease ;
+    transition-duration: 0.2s;
+}
+/* Définition du style header et enfants */
+header{
+    background-color: rgb(236, 214, 225);
+}
+.topbar{
+    text-align: center;
+    color: antiquewhite;
+    background-color: black;
+}
+
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header .container #cart{
+    width: 15%;
+    margin-left: 20%;
+    align-self: flex-start;
+    font-family:'Courgette', cursive;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+header .container #cart .left{
+    display: flex;
+    flex-direction: column;
+}
+header .container img{
+max-width: 85%;
+
+}
+header .container nav{
+    text-align: center;
+    margin-top: 2%;
+    padding-bottom: 2%;
+    width: 100%;
+}
+header nav a {
+    font-family: 'Courgette', cursive;
+    margin: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+header .container > nav a:hover{
+    background-color: rgb(53, 50, 50);
+    color: antiquewhite;
+    transition: all 0.1s ease 0s;
+}
+/* Définition du main */
+
+main{
+    max-width: 75%;
+    margin: auto;
+    font-family: 'Courgette', cursive;
+}
+main #slider {
+    width: 100%;
+    padding: 2%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+main #slider img{
+    max-width: 100%;
+    height: auto;
+   
+    
+}
+main #slider  h2{
+    position: absolute;
+    
+    background-color: #F6D4F5;
+    opacity: 0.8;
+}
+#slider, #select,#new, #best, #crush{
+    box-shadow: 0 0 5px rgba(0,0, 0, 0.1);
+}
+/* Section select */
+#select{
+    background-color:#ffffff ;
+    width: 100%;
+    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+#select article{
+    opacity: 0.5;
+    transition: all 0.2s ease 0s;
+    
+}
+#select article:hover{
+    opacity: 1;
+    transition: all 0.2s ease 0s;
+    cursor:none;
+}
+#select h1 {
+    width: 100%;
+}
+/* Section news */
+#news{
+    width: 100%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+#news article{
+    background-color: #ffffff;
+    width: 30%;
+    
+    padding: 1.5%;
+}
+#news article img{
+    width: 100%;
+}
+#news article h3 {
+    text-align: center;
+}
+#news article small{
+    margin-left: 30%;
+}
+#news  #new h2{
+    background-color: rgb(202, 73, 225);
+}
+#news #best h2{
+    background-color: rgb(73, 225, 86);
+}
+#news  #crush h2{
+    background-color: rgb(73, 103, 225);
+}
+/* Disposition du footer */
+
+footer{
+    background-color: rgb(236, 214, 225);
+}
+
+footer #info{
+    background-color: rgb(231, 178, 205);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+footer #info article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2%;
+}
+footer #info article:hover{
+    color: antiquewhite;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+footer #bottombar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer #bottombar h2{
+    text-align: center;
+    margin-left: 6%;
+}
+footer #bottombar article ul li{
+    list-style: none;
+    text-align: center;
+}
+
+/* média screen */
+@media screen and (max-width:640px){
+    *{margin: 0;}
+    header img {
+        margin-left:10% ;
+    }
+    header nav {
+        display: flex ;
+        flex-direction: column;
+        
+        
+    }
+    header nav a {
+        align-self: center;
+        
+        margin: 0;
+    }
+    header .container #cart{
+        position: absolute;
+        margin-left: 70%;
+    }
+    header .container #cart span{
+        display: none;
+    }
+    main #slider h2{
+        max-width: 75%;
+    }
+   main #select{
+        
+        display: flex;
+        flex-direction:column;
+        
+        
+    }
+    main #select article{
+        align-self: center;
+    }
+   main #news{
+        
+        display: flex;
+        flex-direction: column;
+   }
+   main #news article {
+    width: 100%;
+   }
+    footer #info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    footer #bottombar{
+        display: flex;
+        flex-direction:column;
+        
+        
+    }
+}
